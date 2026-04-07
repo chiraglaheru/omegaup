@@ -23,7 +23,7 @@
         <img
           :src="coderOfTheMonth.gravatar_92"
           height="80"
-          Width= "80
+          width="80"
           :alt="coderOfTheMonth.username"
         />
       </a>
