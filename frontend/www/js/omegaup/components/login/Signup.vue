@@ -127,15 +127,16 @@
         <div class="row">
           <div class="col-md-4 offset-md-2">
             <div class="form-group">
-              <label class="pl-1">
-                <input
-                  id="over13Checked"
-                  v-model="over13Checked"
-                  type="checkbox"
-                  data-over-thirteen-checkbox
-                  @change="updateDateRestriction"
-                />
-                {{ T.over13yearsOld }}
+              <input
+                v-model="over13Checked"
+                type="checkbox"
+                data-over-thirteen-checkbox
+                @change="updateDateRestriction"
+              />
+              <label for="checkbox" class="pl-1">
+                <omegaup-markdown
+                  :markdown="T.over13yearsOld"
+                ></omegaup-markdown>
               </label>
             </div>
           </div>
@@ -306,7 +307,7 @@ import introJs from 'intro.js';
 import VueCookies from 'vue-cookies';
 import { getBlogUrl } from '../../urlHelper';
 import omegaup_PasswordInput from '../common/PasswordInput.vue';
-Vue.use(VueCookies, { expires: -1 });
+Vue.use(VueCookies, { expire: -1 });
 
 @Component({
   components: {
