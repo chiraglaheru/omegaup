@@ -134,9 +134,7 @@
                   data-over-thirteen-checkbox
                   @change="updateDateRestriction"
                 />
-                <omegaup-markdown
-                  :markdown="T.over13yearsOld"
-                ></omegaup-markdown>
+                {{ T.over13yearsOld}}
               </label>
             </div>
           </div>
