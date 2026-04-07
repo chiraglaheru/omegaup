@@ -8,11 +8,11 @@
     >
       <a :href="logo.href" target="_blank">
         <img
-            :class="logo.class"
-            :src="logo.src"
-            :alt="logo.alt"
-            width="280"
-            height="120"
+          :class="logo.class"
+          :src="logo.src"
+          :alt="logo.alt"
+          width="280"
+          height="120"
         />
       </a>
     </div>
