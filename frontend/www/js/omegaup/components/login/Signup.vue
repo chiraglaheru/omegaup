@@ -128,7 +128,7 @@
           <div class="col-md-4 offset-md-2">
             <div class="form-group">
               <label class="pl-1">
-                <input
+                <inputcleaR
                   v-model="over13Checked"
                   type="checkbox"
                   data-over-thirteen-checkbox
