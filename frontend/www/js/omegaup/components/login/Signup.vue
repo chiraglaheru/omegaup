@@ -129,7 +129,6 @@
             <div class="form-group">
               <label class="pl-1">
                 <input
-                  id="over13Checked"
                   v-model="over13Checked"
                   type="checkbox"
                   data-over-thirteen-checkbox
