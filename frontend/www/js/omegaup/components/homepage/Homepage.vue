@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h1 class="sr-only">OmegaUp Homepage</h1>
+    <omegaup-carousel></omegaup-carousel>
     <omegaup-carousel></omegaup-carousel>
     <div
       v-if="
