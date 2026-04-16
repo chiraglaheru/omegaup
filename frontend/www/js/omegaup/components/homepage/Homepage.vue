@@ -1,8 +1,6 @@
 <template>
   <div>
-    <h1 class="sr-only">OmegaUp Homepage</h1>
-    <omegaup-carousel></omegaup-carousel>
-    <omegaup-carousel></omegaup-carousel>
+    <h1 class="sr-only">{{ $t('homepageTitle') }}</h1>
     <div
       v-if="
         coderOfTheMonthFemale ||
