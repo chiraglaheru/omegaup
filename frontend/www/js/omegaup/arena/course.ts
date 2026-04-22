@@ -719,3 +719,4 @@ OmegaUp.on('ready', async () => {
   arenaCourse.$once('hook:beforeDestroy', () => {
     window.removeEventListener('hashchange', onHashChange);
   });
+});
