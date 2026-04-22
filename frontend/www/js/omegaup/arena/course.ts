@@ -671,7 +671,7 @@ OmegaUp.on('ready', async () => {
 
   const component = arenaCourse.$refs.component as arena_Course;
 
-  window.addEventListener('hashchange', async () => {
+  const onHashChange = async () => {
     const { problem, guid } = getOptionsFromLocation(window.location.hash);
     if (guid != null && problem != null) {
       navigateToProblem({
@@ -695,14 +695,11 @@ OmegaUp.on('ready', async () => {
             },
             runDetails,
           });
-
           ({ feedbackMap, feedbackThreadMap } = getFeedbackMap(
             arenaCourse.runDetailsData.feedback,
           ));
-
           arenaCourse.feedbackMap = feedbackMap;
           arenaCourse.feedbackThreadMap = feedbackThreadMap;
-
           if (hash) {
             window.location.hash = hash;
           }
@@ -716,5 +713,9 @@ OmegaUp.on('ready', async () => {
         });
       component.currentPopupDisplayed = PopupDisplayed.RunDetails;
     }
+  };
+  window.addEventListener('hashchange', onHashChange);
+
+  arenaCourse.$once('hook:beforeDestroy', () => {
+    window.removeEventListener('hashchange', onHashChange);
   });
-});
