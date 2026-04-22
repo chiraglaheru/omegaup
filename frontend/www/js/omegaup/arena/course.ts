@@ -695,11 +695,14 @@ OmegaUp.on('ready', async () => {
             },
             runDetails,
           });
+
           ({ feedbackMap, feedbackThreadMap } = getFeedbackMap(
             arenaCourse.runDetailsData.feedback,
           ));
+
           arenaCourse.feedbackMap = feedbackMap;
           arenaCourse.feedbackThreadMap = feedbackThreadMap;
+
           if (hash) {
             window.location.hash = hash;
           }
